@@ -1,4 +1,4 @@
-range_length = 200
+range_length = 100
 
 for x in range(range_length):
     if x == len(range(range_length))-1:
