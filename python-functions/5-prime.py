@@ -11,4 +11,4 @@ def is_prime(number):
         return True
 
 
-print(is_prime(4))
+# print(is_prime(4))
