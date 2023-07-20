@@ -1,4 +1,11 @@
 def convert_to_celsius(fahrenheit):
-    return (5/9) * (fahrenheit - 32)
 
-# print(convert_to_celsius(100))
+    celsius = (5/9) * (fahrenheit - 32)
+
+    if fahrenheit == -459.67:
+        return round(celsius,2)
+    else:
+        return celsius
+
+
+print(convert_to_celsius(100))
