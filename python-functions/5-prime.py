@@ -7,8 +7,5 @@ def is_prime(number):
 
     if number < 1 or type(number) is not int or test_prime > 1:
         return False
-    else:
-        return True
 
-
-# print(is_prime(4))
+    return True
