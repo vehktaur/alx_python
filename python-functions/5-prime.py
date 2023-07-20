@@ -5,7 +5,7 @@ def is_prime(number):
         if number % num == 0:
             test_prime += 1
 
-    if number < 1 or type(number) is not int or test_prime > 1:
+    if number < 2 or type(number) is not int or test_prime > 1:
         return False
     else:
         return True
