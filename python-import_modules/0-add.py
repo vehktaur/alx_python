@@ -1,4 +1,4 @@
-# Importing the add function from add_0.py
+# Importing the add function from module
 from add_0 import add
 
 def main():
