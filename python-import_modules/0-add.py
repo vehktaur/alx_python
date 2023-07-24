@@ -13,4 +13,4 @@ def main():
     print("{} + {} = {}".format(a, b, result))
 
 if __name__ == "__0-add__":
-    0-add()
+    main()
