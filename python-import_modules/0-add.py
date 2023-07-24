@@ -2,6 +2,7 @@
 
 from add_0 import add
 
+
 def main():
     # Define the variables a and b
     a = 1
@@ -12,6 +13,7 @@ def main():
 
     # Print the result using string formatting
     print("{} + {} = {}".format(a, b, result))
+
 
 if __name__ == "__main__":
     main()
