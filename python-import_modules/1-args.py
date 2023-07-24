@@ -12,5 +12,3 @@ if __name__ == "__main__":
             for arg in args:
                 print("{}: {}".format(i, arg))
                 i += 1
-
-arguments(3)
