@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 if __name__ == "__main__":
-
     def arguments(*args):
         length = len(args)
         letter = "" if length == 1 else "s"
