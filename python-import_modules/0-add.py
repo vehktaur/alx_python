@@ -12,5 +12,5 @@ def main():
     # Print the result using string formatting
     print("{} + {} = {}".format(a, b, result))
 
-if __name__ == "__0-add__":
+if __name__ == "__main__":
     main()
