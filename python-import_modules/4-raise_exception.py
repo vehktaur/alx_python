@@ -6,7 +6,5 @@ def raise_exception():
 
     return age + name 
 
-    raise Exception("Exception has been raised")
-
 if __name__ == "__main__":
     raise_exception()
