@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
+
 def square_matrix_simple(matrix=[]):
+
     new_matrix = []
     for inner_matrix in matrix:
         new_inner_matrix = []
