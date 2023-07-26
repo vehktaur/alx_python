@@ -5,7 +5,8 @@ def safe_print_division(a, b):
         result = float(a/b)
         return result
     except:
-        return "Types are not compatible"
+        result = "None"
+        return result
     finally:
         print("Inside result: {}".format(result))
 
