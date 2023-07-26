@@ -7,7 +7,7 @@ def safe_print_division(a, b):
     except:
         return "Types are not compatible"
     finally:
-        return "Inside result: {}".format(result)
+        print("Inside result: {}".format(result))
 
 
 if __name__ == "__main__":
