@@ -3,7 +3,7 @@
 def print_matrix_integer(matrix=[[]]):
     for list in matrix:
         for list_item in list:
-            print("{}".format(list_item), end=" ")
+            print(":d}".format(list_item), end=" ")
         else:
             print()
 
