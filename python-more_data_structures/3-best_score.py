@@ -7,4 +7,12 @@ def best_score(a_dictionary):
         values = a_dictionary.values()
         values = list(values)
         values.sort()
-        return values[-1]
+        best_score = values[-1]
+        high_scorer = ""
+
+        for key, value in a_dictionary.items():
+            if value == best_score:
+                high_scorer = key
+            else:
+                continue
+        return high_scorer
