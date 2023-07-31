@@ -1,5 +1,5 @@
 """
-a simple class 
+a simple class
 """
 
 
