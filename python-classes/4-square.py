@@ -37,6 +37,3 @@ class Square:
                     print("#", end="")
                 else:
                     print()
-
-check = Square(10)
-check.my_print()
