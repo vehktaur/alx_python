@@ -28,4 +28,15 @@ class Square:
     def area(self):
         return self.size ** 2
 
+    def my_print(self):
+        if self.__size == 0:
+            print()
+        else:
+            for row in range(self.__size):
+                for item in range(self.__size):
+                    print("#", end="")
+                else:
+                    print()
 
+check = Square(10)
+check.my_print()
