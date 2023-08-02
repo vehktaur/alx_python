@@ -6,7 +6,7 @@ third python inheritance task
 def inherits_from(obj, a_class):
     """
     this function checks if the object
-    is an instance of a descendant of the class, 
+    is an instance of a descendant of the class,
     either directly or indirectly
     """
 
