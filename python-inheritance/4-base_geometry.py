@@ -3,10 +3,10 @@ fourth python inheritance task
 """
 
 
-def inherits_from(obj, a_class):
+class BaseGeometry:
     """
     created here is a non empty class
     that prints a sentence
     """
     def area(self):
-        print("area() is not implemented")
+        raise Exception("area() is not implemented")

@@ -3,7 +3,7 @@ fourth python inheritance task
 """
 
 
-def inherits_from(obj, a_class):
+class BaseGeometry:
     """
     created here is an empty class
     that does nothing
