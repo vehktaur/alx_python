@@ -35,6 +35,10 @@ class BaseGeometry(metaclass=BaseGeometryMeta):
 
 
 class Rectangle(BaseGeometry):
+    
+    """
+    This creates a rectangle object
+    """
     def __init__(self, width, height):
         super.__init__()
         self.__width = super().integer_validator("width", width)
