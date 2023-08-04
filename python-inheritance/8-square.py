@@ -1,5 +1,5 @@
 """
-seventh python inheritance task
+8th python inheritance task
 """
 
 
@@ -46,3 +46,15 @@ class Rectangle(BaseGeometry):
     def __init__(self, width, height):
         self.__width = super().integer_validator("width", width)
         self.__height = super().integer_validator("height", height)
+
+    def __str__(self):
+        return f"[Rectangle] {self.__width} / {self.__height}"
+
+    def area(self):
+        return self.__width * self.__height
+
+
+class Square(Rectangle):
+    def __init__(self, size):
+        self.__size = super().integer_validator("size", size)
+        super().__init__(size, size)
