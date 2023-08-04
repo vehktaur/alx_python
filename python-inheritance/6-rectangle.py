@@ -1,5 +1,5 @@
 """
-sixth python inheritance task
+seventh python inheritance task
 """
 
 
@@ -32,3 +32,10 @@ class BaseGeometry(metaclass=BaseGeometryMeta):
             raise ValueError(f"{name} must be greater than 0")
         else:
             return value
+
+
+class Rectangle(BaseGeometry):
+    def __init__(self, width, height):
+        super.__init__()
+        self.__width = super().integer_validator("width", width)
+        self.__height = super().integer_validator("height", height)
