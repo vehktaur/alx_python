@@ -40,10 +40,13 @@ class Rectangle(BaseGeometry):
     This creates a rectangle object
     """
 
-    def __dir__(self):
-        variables = object.__dir__(self)
-        return variables
+    def __init_subclass__(cls):
+        return object.__init_subclass__()
 
     def __init__(self, width, height):
         self.__width = super().integer_validator("width", width)
         self.__height = super().integer_validator("height", height)
+
+
+a = Rectangle(23, 3)
+print(issubclass(a.__class__, BaseGeometry))
