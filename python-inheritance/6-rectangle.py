@@ -6,7 +6,8 @@ seventh python inheritance task
 class BaseGeometryMeta(type):
     def __dir__(self):
         variables = super().__dir__()
-        new_variables = [var for var in variables if var != "__init_subclass__"]
+        new_variables = [
+            var for var in variables if var != "__init_subclass__"]
         return new_variables
 
 
@@ -17,7 +18,8 @@ class BaseGeometry(metaclass=BaseGeometryMeta):
 
     def __dir__(self):
         variables = super().__dir__()
-        new_variables = [var for var in variables if var != "__init_subclass__"]
+        new_variables = [
+            var for var in variables if var != "__init_subclass__"]
         return new_variables
 
     def area(self):
@@ -37,9 +39,6 @@ class Rectangle(BaseGeometry):
     """
     This creates a rectangle object
     """
-
-    def __init_subclass__(cls):
-        return object.__init_subclass__()
 
     def __init__(self, width, height):
         self.__width = super().integer_validator("width", width)
