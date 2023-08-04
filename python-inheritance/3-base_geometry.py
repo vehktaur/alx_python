@@ -8,4 +8,5 @@ class BaseGeometry(object):
     created here is an empty class
     that does nothing
     """
-    pass
+    def __dir__(self):
+        return [attr for attr in dir(self) if not "__init_subclass__"]
