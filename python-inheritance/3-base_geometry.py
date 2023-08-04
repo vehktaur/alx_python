@@ -9,4 +9,4 @@ class BaseGeometry(object):
     that does nothing
     """
     def __dir__(self):
-        return [attr for attr in dir(self) if not "__init_subclass__"]
+        return [attr for attr in super().__dir__() if not "__init_subclass__"]
