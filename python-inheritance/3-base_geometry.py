@@ -18,8 +18,3 @@ class BaseGeometry(metaclass=BaseGeometryMeta):
         variables = super().__dir__()
         new_variables = [var for var in variables if var != "__init_subclass__"]
         return new_variables
-
-a = BaseGeometry()
-
-print(dir(a))
-print(dir(BaseGeometry))
