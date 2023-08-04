@@ -42,5 +42,3 @@ class Rectangle(BaseGeometry):
     def __init__(self, width, height):
         self.__width = super().integer_validator("width", width)
         self.__height = super().integer_validator("height", height)
-
-print(issubclass(Rectangle, BaseGeometry))
