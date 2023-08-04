@@ -40,6 +40,7 @@ class Rectangle(BaseGeometry):
     This creates a rectangle object
     """
     def __init__(self, width, height):
-        super.__init__()
         self.__width = super().integer_validator("width", width)
         self.__height = super().integer_validator("height", height)
+
+print(issubclass(Rectangle, BaseGeometry))
