@@ -18,8 +18,7 @@ class BaseGeometry(metaclass=BaseGeometryMeta):
 
     def __dir__(self):
         variables = super().__dir__()
-        new_variables = [
-            var for var in variables if var != "__init_subclass__"]
+        new_variables = [var for var in variables if var != "__init_subclass__"]
         return new_variables
 
     def area(self):
