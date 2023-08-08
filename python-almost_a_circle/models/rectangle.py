@@ -1,3 +1,7 @@
+"""
+rectangle module
+"""
+
 from base import Base
 
 """
