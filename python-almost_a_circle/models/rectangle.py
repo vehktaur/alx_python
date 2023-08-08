@@ -1,11 +1,11 @@
 """
-rectangle module
+rectangle module for the rectangle class
 """
 
 from base import Base
 
 """
-rectangle module
+import of Base class from base 
 """
 
 
@@ -19,6 +19,9 @@ class Rectangle(Base):
         rectangle init function
         """
         super().__init__(id)
+        """
+        public rectangle instances
+        """
         self.__width = width
         self.__height = height
         self.__x = x
