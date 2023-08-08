@@ -5,7 +5,8 @@ rectangle module for the rectangle class
 
 from base import Base 
 """
-
+rectangle module for the rectangle class
+rectangle module for the rectangle class
 """
 
 
