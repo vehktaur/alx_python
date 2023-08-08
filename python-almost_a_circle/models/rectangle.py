@@ -159,11 +159,3 @@ class Rectangle(Base):
         """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
 
-
-r1 = Rectangle(2, 3, 2, 2)
-r1.display()
-
-print("---")
-
-r2 = Rectangle(3, 2, 1, 0)
-r2.display()
