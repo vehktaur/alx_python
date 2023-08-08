@@ -142,8 +142,8 @@ class Rectangle(Base):
         rectangle display public method
         """
         
-        for row in range(self.__width):
-            for column in range(self.__height):
+        for row in range(self.__height):
+            for column in range(self.__width):
                 print("#", end="")
             else:
                 print()    
