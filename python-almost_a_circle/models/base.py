@@ -1,3 +1,6 @@
+"""
+Base.py module for python almost a circle project
+"""
 class Base:
     """
     Base class for all other classes
