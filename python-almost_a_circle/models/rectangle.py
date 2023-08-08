@@ -136,3 +136,15 @@ class Rectangle(Base):
         public area method that returns the area of the rectangle
         """
         return self.__width * self.__height
+
+    def display(self):
+        """
+        rectangle display public method
+        """
+        
+        for row in range(self.__width):
+            for column in range(self.__height):
+                print("#", end="")
+            else:
+                print()    
+            
