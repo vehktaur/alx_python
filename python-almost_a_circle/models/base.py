@@ -10,7 +10,7 @@ class Base:
         """
         initialization function with id attribute set
         """
-        if self.id is not None:
+        if id is not None:
             self.id = id
         else:
             self.id = Base.__nb_objects + 1
