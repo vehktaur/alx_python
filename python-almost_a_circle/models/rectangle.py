@@ -2,10 +2,10 @@
 rectangle module for the rectangle class
 """
 
-from base import Base
+import base
 
 
-class Rectangle(Base):
+class Rectangle(base.Base):
     """
     rectangle class that inherits from the base class
     """
