@@ -141,12 +141,17 @@ class Rectangle(Base):
         """
         rectangle display public method
         """
+        for row in range(self.__y):
+            print()
 
         for row in range(self.__height):
-            for column in range(self.__width):
-                print("#", end="")
+            for column in range(self.__x):
+                print(" ", end="")
             else:
-                print()
+                for column in range(self.__width):
+                    print("#", end="")
+                else:
+                    print()
 
     def __str__(self):
         """
