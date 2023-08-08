@@ -4,10 +4,6 @@ rectangle module for the rectangle class
 
 from base import Base
 
-"""
-import of Base class from base 
-"""
-
 
 class Rectangle(Base):
     """
