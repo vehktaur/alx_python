@@ -130,7 +130,7 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         else:
             self.__y = y
-            
+
     def area(self):
         """
         public area method that returns the area of the rectangle
@@ -141,10 +141,15 @@ class Rectangle(Base):
         """
         rectangle display public method
         """
-        
+
         for row in range(self.__height):
             for column in range(self.__width):
                 print("#", end="")
             else:
-                print()    
-            
+                print()
+
+    def __str__(self):
+        """
+        rewrite default str method string
+        """
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
