@@ -1,6 +1,12 @@
 class Base:
+    """
+    Base class for all other classes
+    """
     __nb_objects = 0
     def __init__(self, id=None):
+        """
+        initialization function with id attribute set
+        """
         if self.id is not None:
             self.id = id
         else:
