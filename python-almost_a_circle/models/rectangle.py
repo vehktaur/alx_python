@@ -143,18 +143,27 @@ class Rectangle(Base):
         """
         for row in range(self.__y):
             print()
-
-        for row in range(self.__height):
-            for column in range(self.__x):
-                print(" ", end="")
-            else:
-                for column in range(self.__width):
-                    print("#", end="")
+        else:
+            for row in range(self.__height):
+                for column in range(self.__x):
+                    print(" ", end="")
                 else:
-                    print()
+                    for column in range(self.__width):
+                        print("#", end="")
+                    else:
+                        print()
 
     def __str__(self):
         """
         rewrite default str method string
         """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
+
+
+r1 = Rectangle(2, 3, 2, 2)
+r1.display()
+
+print("---")
+
+r2 = Rectangle(3, 2, 1, 0)
+r2.display()
