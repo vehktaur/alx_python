@@ -160,6 +160,9 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
 
     def update(self, *args):
+        """
+        update function to update the default arguments and id
+        """
         args_length = len(args)
         if args_length > 0:
             self.id = args[0]
