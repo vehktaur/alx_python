@@ -204,8 +204,6 @@ class Square(Rectangle):
         square initialization method
         """
         super().__init__(size, size, x, y, id)
-        self.__height = size
-        self.__width = size
 
     def __str__(self):
         """
