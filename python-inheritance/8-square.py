@@ -16,4 +16,3 @@ class Square(Rectangle):
         super().__init__(size, size)
 
 
-print(issubclass(Square, Rectangle))
