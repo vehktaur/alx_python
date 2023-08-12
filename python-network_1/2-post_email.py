@@ -13,4 +13,4 @@ r = requests.post(url, data=payload)
 
 email = r.text
 
-print("Email: ", email)
+print(email)
