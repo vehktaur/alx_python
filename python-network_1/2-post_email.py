@@ -7,10 +7,10 @@ import sys
 
 url = sys.argv[1]
 email = sys.argv[2]
-payload = {email: email}
+payload = {"email": email}
 
 r = requests.post(url, data=payload)
 
-email = r.text
+request_email = r.text
 
-print(email)
+print(request_email)
