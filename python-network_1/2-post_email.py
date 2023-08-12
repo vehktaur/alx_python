@@ -11,6 +11,6 @@ payload = {email: email}
 
 r = requests.post(url, data=payload)
 
-email = r.headers.get("args")
+email = r.text
 
-print("Email: ", email["email"])
+print("Email: ", email)
