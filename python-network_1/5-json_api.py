@@ -9,7 +9,7 @@ q = ""
 
 if len(sys.argv) > 1:
     arg = sys.argv[1]
-    if arg is str:
+    if type(arg) is str:
         q = arg
         
         payload = {"q" : q}
@@ -28,4 +28,3 @@ if len(sys.argv) > 1:
         else:
             print("No result") 
         
-
