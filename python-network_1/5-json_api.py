@@ -5,7 +5,7 @@ module documentation
 import requests
 import sys
 
-q = ""
+q = "No result"
 
 if len(sys.argv) > 1:
     arg = sys.argv[1]
@@ -16,15 +16,15 @@ if len(sys.argv) > 1:
         
         r = requests.post("http://0.0.0.0:5000/search_user", data = payload)
         
-        text = r.json()
-        
-        if text:
-            id = text.get("id")
-            name = text.get("name")
-            if id is not None and name is not None:
+        try:
+            text = r.json()
+            
+            if text:
+                id = text.get("id")
+                name = text.get("name")
                 print("[{}] {}".format(id, name))
             else:
-                print("Not a valid JSON")
-        else:
-            print("No result") 
-        
+                print("No result")
+        except:
+            print("Not a valid JSON") 
+
