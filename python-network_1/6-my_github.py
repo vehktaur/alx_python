@@ -19,9 +19,9 @@ try:
     if response.status_code == 200:
         user_info = response.json()
         user_id = user_info["id"]
-        print(f"Your GitHub user ID is: {user_id}")
+        print(f"{user_id}")
     else:
-        print(f"Error: {response.status_code} - {response.text}")
+        print(f"None")
     
 except requests.RequestException as e:
     print("An error occurred:", e)
