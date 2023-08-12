@@ -2,7 +2,8 @@
 module documentation
 """
 
-import requests, sys
+import requests 
+import sys
 
 url = sys.argv[1]
 
