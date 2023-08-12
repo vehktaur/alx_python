@@ -10,3 +10,7 @@ email = sys.argv[2]
 payload = {email: email}
 
 r = requests.post(url, data=payload)
+
+email = r.headers.get("args")
+
+print("Email: ", email["email"])
