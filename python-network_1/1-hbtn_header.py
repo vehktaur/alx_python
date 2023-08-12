@@ -2,18 +2,13 @@
 module documentation
 """
 
-import requests 
+import requests
 import sys
 
 url = sys.argv[1]
 
 req = requests.get(url)
 
-content = req.headers["X-Request-Id"]
+content = req.headers.get("X-Request-Id")
 
-if len(content) > 0:
-    print(req.headers["X-Request-Id"])
-else:
-    print(None)
-
-
+print(content)
