@@ -27,4 +27,5 @@ if len(sys.argv) > 1:
                 print("No result")
         except:
             print("Not a valid JSON") 
-
+else:
+    print(q)
