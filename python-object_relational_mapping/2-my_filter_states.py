@@ -19,7 +19,7 @@ def main():
     """
     the main function
     """
-    query = "SELECT * FROM states WHERE BINARY name = '{}' ORDER BY id;".format(
+    query = "SELECT * FROM states WHERE BINARY name='{}' ORDER BY id;".format(
         arg)
     cur.execute(query)
     rows = cur.fetchall()
