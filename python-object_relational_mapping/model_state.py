@@ -8,10 +8,6 @@ from sqlalchemy.orm import sessionmaker
 from sys import argv
 
 
-user = argv[1]
-passwd = argv[2]
-database = argv[3]
-
 """Define the State class"""
 Base = declarative_base()
 
@@ -19,7 +15,7 @@ Base = declarative_base()
 class State(Base):
     """
     Represents a state entity in the MySQL table 'states'.
-    
+
     Attributes:
     id (int): An auto-generated, unique integer representing the primary key.
     name (str): A string with a maximum of 128 characters representing the state name.
@@ -35,4 +31,3 @@ Session = sessionmaker(bind=engine)
 session = Session()
 
 # Import the State class
-
