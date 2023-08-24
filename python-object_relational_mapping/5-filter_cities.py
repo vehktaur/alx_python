@@ -31,8 +31,9 @@ def main():
     cur.execute(query, (state,))
     cities = cur.fetchall()
     for index, city in enumerate(cities):
-        print(city[0], end=", " if index < len(cities) - 1 else "\n")
-
+        print(city[0], end=", " if index < len(cities) - 1 else "")
+    else:
+        print()
 
 
 if __name__ == "__main__":
