@@ -24,8 +24,8 @@ class QueryFirstState:
         self.mysql_password = mysql_password
         self.database_name = database_name
         self.engine = create_engine(
-            f'mysql://{mysql_username}:{mysql_password}@localhost:3306/{
-                database_name}')
+            'mysql://{}:{}@localhost:3306/{}'.format(
+                mysql_username, mysql_password, database_name))
         self.Session = sessionmaker(bind=self.engine)
 
     def print_first_state(self):
