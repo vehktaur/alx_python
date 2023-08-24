@@ -4,6 +4,7 @@ module docs
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from sys import argv
 # Import Base and State from model_state module
 from model_state import Base, State
 
@@ -42,9 +43,9 @@ class QueryFirstState:
 
 if __name__ == "__main__":
     # Replace with your MySQL credentials and database name
-    mysql_username = 'username'
-    mysql_password = 'password'
-    database_name = 'hbtn_0e_6_usa'
+    mysql_username = argv[1]
+    mysql_password = argv[2]
+    database_name = argv[3]
 
     query = QueryFirstState(mysql_username, mysql_password, database_name)
     query.print_first_state()
