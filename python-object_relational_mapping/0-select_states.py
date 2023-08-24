@@ -4,7 +4,7 @@ first task in Python ORM
 
 import MySQLdb
 
-db = MySQLdb.connect(host = "localhost", user = "watashi", passwd =  "")
+db = MySQLdb.connect(host = "localhost", user = "watashi", passwd =  "passwd")
 
 cur = db.cursor()
 
