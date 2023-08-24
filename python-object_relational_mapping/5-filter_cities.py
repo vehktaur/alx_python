@@ -11,7 +11,6 @@ database = sys.argv[3]
 state = sys.argv[4]
 
 db = MySQLdb.connect(user=user, passwd=passwd, database=database)
-
 cur = db.cursor()
 
 
