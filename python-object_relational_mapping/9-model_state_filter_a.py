@@ -11,7 +11,8 @@ from model_state import Base, State
 
 class QueryStatesWithA:
     """
-    A class to query and print State objects containing the letter "a" from the database.
+    A class to query and print State objects
+    containing the letter "a" from the database.
 
     Attributes:
         mysql_username (str): MySQL username.
