@@ -15,7 +15,7 @@ class State(Base):
     Attributes:
     id (int): An auto-generated, unique integer representing
     the primary key.
-    name (str): A string with a maximum of 128 characters 
+    name (str): A string with a maximum of 128 characters
     representing the state name.
     """
     __tablename__ = 'states'
