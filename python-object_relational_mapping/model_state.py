@@ -30,12 +30,9 @@ class State(Base):
 
 
 # Connect to the MySQL server
-engine = create_engine(
-    'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(user, passwd, database))
+
 Session = sessionmaker(bind=engine)
 session = Session()
 
 # Import the State class
 
-# Create the table
-Base.metadata.create_all(engine)
