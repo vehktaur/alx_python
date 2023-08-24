@@ -9,9 +9,10 @@ user = sys.argv[1]
 passwd = sys.argv[2]
 database = sys.argv[3]
 
-db = MySQLdb.connect(user = user, passwd =  passwd, database = database)
+db = MySQLdb.connect(user=user, passwd=passwd, database=database)
 
 cur = db.cursor()
+
 
 def main():
     query = "SELECT * FROM states ORDER BY id;"
@@ -19,8 +20,7 @@ def main():
     rows = cur.fetchall()
     for row in rows:
         print(row)
-    
-    
+
+
 if __name__ == "__main__":
     main()
-
