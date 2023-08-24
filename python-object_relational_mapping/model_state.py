@@ -12,13 +12,13 @@ user = argv[1]
 passwd = argv[2]
 database = argv[3]
 
-# Define the State class
+"""Define the State class"""
 Base = declarative_base()
 
 
 class State(Base):
     """
-    class documentation
+    class documentation for State
     """
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
