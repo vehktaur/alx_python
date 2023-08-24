@@ -19,7 +19,9 @@ def main():
     """
     the main function
     """
-    cur.execute("SELECT * FROM states WHERE name = %s ORDER BY id;", (arg,))
+    query = "SELECT * FROM states WHERE states.name = '{}' ORDER BY id;".format(
+        arg)
+    cur.execute(query)
     rows = cur.fetchall()
     for row in rows:
         print(row)
