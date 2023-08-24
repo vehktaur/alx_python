@@ -8,4 +8,13 @@ db = MySQLdb.connect(host = "localhost", user = "watashi", passwd =  "passwd", d
 
 cur = db.cursor()
 
-cur.execute("SELECT * FROM states ORDER_BY id" )
+def main():
+    query = "SELECT * FROM states ORDER BY id;"
+    cur.execute(query)
+    rows = cur.fetchall()
+    print(rows)
+    
+    
+if __name__ == "__main__":
+    main()
+
