@@ -18,9 +18,10 @@ def main():
     """
     the main function
     """
-    query = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id;"
+    query = "SELECT * FROM states ORDER BY id;"
     cur.execute(query)
-    rows = cur.fetchall()
+    rows = list(cur.fetchall())
+    rows = filter(lambda x: x[1].startswith("N"), rows)
     for row in rows:
         print(row)
 
