@@ -12,7 +12,9 @@ passwd = argv[2]
 database = argv[3]
 
 engine = create_engine(
-    "mysql+mysqldb://{}:{}@localhost/{}".format(user, passwd, database), pool_pre_ping=True)
+    "mysql+mysqldb://{}:{}@localhost/{}".format(
+        user, passwd, database), 
+    pool_pre_ping=True)
 
 Session = sessionmaker(bind=engine)
 session = Session()
