@@ -29,6 +29,7 @@ def ctext(text):
     """
     mandatory docs
     """
+    text = text.replace("_"," ")
     return f"C {escape(text)}"
 
 
