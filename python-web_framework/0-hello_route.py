@@ -1,3 +1,6 @@
+"""
+module documentation for task 0 file
+"""
 from flask import Flask
 
 app = Flask(__name__)
@@ -5,6 +8,9 @@ app = Flask(__name__)
 
 @app.route('/', strict_slashes=False)
 def hello():
+    """
+    index route function
+    """
     return "Hello HBNB!"
 
 
