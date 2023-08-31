@@ -32,12 +32,13 @@ def ctext(text):
     return f"C {escape(text)}"
 
 
+@app.route('/python/', strict_slashes=False)
 @app.route("/python/<text>", strict_slashes=False)
-def python_text(text ="is cool"):
+def python_text(text="is cool"):
     """
     mandatory function docs
     """
-    text = text.replace("_"," ")
+    text = text.replace("_", " ")
     return f"Python {escape(text)}"
 
 
