@@ -37,6 +37,7 @@ def python_text(text = "is cool"):
     """
     mandatory function docs
     """
+    text.replace("_"," ")
     return f"Python {escape(text)}"
 
 
