@@ -29,9 +29,9 @@ def ctext(text):
     """
     mandatory docs
     """
-    text = text.replace("_"," ")
+    text = text.replace("_", " ")
     return f"C {escape(text)}"
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=5000, debug=True)

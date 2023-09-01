@@ -47,5 +47,17 @@ def number_template(n):
         return "Invalid input."
 
 
+@app.route('/number_odd_or_even/<int:n>', strict_slashes=False)
+def number_odd_or_even(n):
+    """Render an HTML template to display 'Number: n'."""
+    chance = "odd"
+    if n % 2 == 0:
+        chance = "even"
+    if isinstance(n, int):
+        return render_template('6-number_odd_or_even.html', number=n, chance=chance)
+    else:
+        return "Invalid input."
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
