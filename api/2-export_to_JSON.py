@@ -1,5 +1,5 @@
 import requests
-import csv
+import json
 import sys
 
 
@@ -30,6 +30,25 @@ def get_employee_info(employee_id):
         for task in todo_data:
             if task["completed"]:
                 print(f"\t{task['title']}")
+
+        # Create a dictionary to represent the data
+        employee_json_data = {
+            "USER_ID": [
+                {
+                    "task": task["title"],
+                    "completed": task["completed"],
+                    "username": employee_data['name']
+                }
+                for task in todo_data
+            ]
+        }
+
+        # Export data to JSON
+        json_file_name = f"{employee_id}.json"
+        with open(json_file_name, mode='w') as json_file:
+            json.dump(employee_json_data, json_file, indent=4)
+
+        print(f"Data exported to {json_file_name}")
 
     except requests.exceptions.RequestException as e:
         print(f"Error: {e}")

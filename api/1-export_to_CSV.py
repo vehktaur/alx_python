@@ -31,6 +31,23 @@ def get_employee_info(employee_id):
             if task["completed"]:
                 print(f"\t{task['title']}")
 
+        # Export data to CSV
+        csv_file_name = f"{employee_id}.csv"
+        with open(csv_file_name, mode='w', newline='') as csv_file:
+            csv_writer = csv.writer(
+                csv_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+
+            # Write CSV header
+            csv_writer.writerow(
+                ["USER_ID", "USERNAME", "TASK_COMPLETED_STATUS", "TASK_TITLE"])
+
+            # Write TODO list data to CSV
+            for task in todo_data:
+                csv_writer.writerow(
+                    [employee_id, employee_data['name'], task['completed'], task['title']])
+
+        print(f"Data exported to {csv_file_name}")
+
     except requests.exceptions.RequestException as e:
         print(f"Error: {e}")
         sys.exit(1)
