@@ -29,7 +29,7 @@ def get_employee_info(employee_id):
         # Print titles of completed tasks
         for task in todo_data:
             if task.get("completed"):
-                print(f"{task.get('title')}\t")
+                print(f"\t {task.get('title')}")
 
     except requests.exceptions.RequestException as e:
         print(f"Error: {e}")
