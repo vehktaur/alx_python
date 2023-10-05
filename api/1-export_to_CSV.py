@@ -1,5 +1,5 @@
-import requests
 import csv
+import requests
 import sys
 
 
@@ -20,16 +20,16 @@ def get_employee_info(employee_id):
 
         # Calculate TODO list progress
         total_tasks = len(todo_data)
-        completed_tasks = sum(1 for task in todo_data if task["completed"])
+        completed_tasks = sum(1 for task in todo_data if task.get("completed"))
 
         # Print employee's TODO list progress
         print(
-            f"Employee {employee_data['name']} is done with tasks ({completed_tasks}/{total_tasks}):")
+            f"Employee {employee_data.get('name')} is done with tasks ({completed_tasks}/{total_tasks}):")
 
         # Print titles of completed tasks
         for task in todo_data:
-            if task["completed"]:
-                print(f"\t{task['title']}")
+            if task.get("completed"):
+                print(f"\t{task.get('title')}")
 
         # Export data to CSV
         csv_file_name = f"{employee_id}.csv"
@@ -44,7 +44,7 @@ def get_employee_info(employee_id):
             # Write TODO list data to CSV
             for task in todo_data:
                 csv_writer.writerow(
-                    [employee_id, employee_data['name'], task['completed'], task['title']])
+                    [employee_id, employee_data.get('name'), task.get("completed"), task.get('title')])
 
         print(f"Data exported to {csv_file_name}")
 

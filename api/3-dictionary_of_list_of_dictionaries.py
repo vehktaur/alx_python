@@ -1,5 +1,5 @@
-import requests
 import json
+import requests
 
 def get_todo_data():
     # URL for employee details
