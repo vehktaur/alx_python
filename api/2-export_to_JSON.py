@@ -1,5 +1,5 @@
 """
-module docs for alx export to JSON task
+python3 -c 'print(__import__("my_module").__doc__)'
 """
 import json
 import requests

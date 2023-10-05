@@ -1,3 +1,6 @@
+"""
+python3 -c 'print(__import__("my_module").__doc__)'
+"""
 import csv
 import requests
 import sys
