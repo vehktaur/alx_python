@@ -46,8 +46,6 @@ def get_employee_info(employee_id):
                 csv_writer.writerow(
                     [employee_id, employee_data.get('name'), task.get("completed"), task.get('title')])
 
-        print(f"Data exported to {csv_file_name}")
-
     except requests.exceptions.RequestException as e:
         print(f"Error: {e}")
         sys.exit(1)
