@@ -40,6 +40,8 @@ def get_employee_info(employee_id):
         
         print(f"Data exported to {csv_file_name}")
         
+        csv_file.close()
+        
     except requests.exceptions.RequestException as e:
         print(f"Error: {e}")
         sys.exit(1)
