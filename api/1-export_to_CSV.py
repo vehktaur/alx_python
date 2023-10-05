@@ -43,8 +43,10 @@ def get_employee_info(employee_id):
 
             # Write TODO list data to CSV
             for task in todo_data:
-                csv_writer.writerow(
-                    [employee_id, employee_data.get('name'), task.get("completed"), task.get('title')])
+                csv_writer.writerow([employee_id, employee_data.get(
+                    'name'), task.get('completed'), task.get('title')])
+
+        print(f"Data exported to {csv_file_name}")
 
     except requests.exceptions.RequestException as e:
         print(f"Error: {e}")
@@ -56,5 +58,5 @@ if __name__ == "__main__":
         print("Usage: python script.py <employee_id>")
         sys.exit(1)
 
-    employee_id = sys.argv[1]
+    employee_id = int(sys.argv[1])
     get_employee_info(employee_id)
