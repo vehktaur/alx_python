@@ -1,3 +1,6 @@
+"""
+module docs for alx export to JSON task
+"""
 import json
 import requests
 import sys
