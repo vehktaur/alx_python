@@ -41,7 +41,7 @@ print(
 
 for task in todo_data:
     if task.get("completed"):
-        print(f"\t{task.get("title")}")
+        print(f"\t{task.get('title')}")
 
 employee_json_data = {
     str(employee_id): [
