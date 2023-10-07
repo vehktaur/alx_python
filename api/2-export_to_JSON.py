@@ -13,7 +13,6 @@ Module Structure:
     - Finally, it exports the data into a JSON file and prints a confirmation message.
 """
 
-
 import json
 import requests
 import sys
