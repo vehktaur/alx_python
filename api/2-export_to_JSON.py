@@ -1,6 +1,7 @@
 """
 basic documentation for this python module
-python3 -c 'print(__import__("my_module").__doc__)'
+basic documentation for this python module
+basic documentation for this python module
 """
 import json
 import requests
