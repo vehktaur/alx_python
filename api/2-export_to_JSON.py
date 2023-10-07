@@ -33,7 +33,6 @@ todo_data = todo_response.json()
 total_tasks = len(todo_data)
 completed_tasks = sum(1 for task in todo_data if task.get("completed"))
 
-
 print(
     f"Employee {employee_data.get('name')} is done with tasks ({completed_tasks}/{total_tasks}):")
 
@@ -41,7 +40,6 @@ print(
 for task in todo_data:
     if task.get("completed"):
         print(f"\t{task['title']}")
-
 
 employee_json_data = {
     str(employee_id): [
@@ -53,7 +51,6 @@ employee_json_data = {
         for task in todo_data
     ]
 }
-
 
 json_file_name = f"{employee_id}.json"
 with open(json_file_name, 'w') as json_file:
