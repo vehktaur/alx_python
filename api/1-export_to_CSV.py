@@ -24,7 +24,7 @@ completed_tasks = sum(1 for task in todo_data if task.get("completed"))
 
 # Export data to CSV
 csv_file_name = f"{employee_id}.csv"
-with open(csv_file_name, mode='w') as csv_file:
+with open(csv_file_name, 'w', newline="") as csv_file:
     csv_writer = csv.writer(csv_file, quoting=csv.QUOTE_ALL)
 
     # Write TODO list data to CSV
