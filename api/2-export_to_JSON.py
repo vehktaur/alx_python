@@ -19,11 +19,8 @@ import sys
 
 employee_id = sys.argv[1]
 
-
 employee_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}"
-
 todo_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}/todos"
-
 
 employee_response = requests.get(employee_url)
 employee_data = employee_response.json()
