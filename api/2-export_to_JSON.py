@@ -1,4 +1,5 @@
 """
+basic documentation for this python module
 python3 -c 'print(__import__("my_module").__doc__)'
 """
 import json
@@ -14,6 +15,9 @@ employee_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}"
 todo_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}/todos"
 
 try:
+    """
+    try to get data from API
+    """
     # Fetch employee details
     employee_response = requests.get(employee_url)
     employee_data = employee_response.json()
@@ -55,5 +59,8 @@ try:
     print(f"Data exported to {json_file_name}")
 
 except requests.exceptions.RequestException as e:
+    """
+    handle any exceptions during API request
+    """
     print(f"Error: {e}")
     sys.exit(1)
