@@ -1,7 +1,7 @@
 """
-basic documentation for this python module
-basic documentation for this python module
-basic documentation for this python module
+this module request data from a REST API 
+and returns a json file containing information
+from the requested data
 """
 import json
 import requests
@@ -15,53 +15,47 @@ employee_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}"
 # URL for employee's TODO list
 todo_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}/todos"
 
-try:
-    """
-    try to get data from API
-    """
-    # Fetch employee details
-    employee_response = requests.get(employee_url)
-    employee_data = employee_response.json()
 
-    # Fetch TODO list
-    todo_response = requests.get(todo_url)
-    todo_data = todo_response.json()
+"""
+try to get data from API
+"""
+# Fetch employee details
+employee_response = requests.get(employee_url)
+employee_data = employee_response.json()
 
-    # Calculate TODO list progress
-    total_tasks = len(todo_data)
-    completed_tasks = sum(1 for task in todo_data if task.get("completed"))
+# Fetch TODO list
+todo_response = requests.get(todo_url)
+todo_data = todo_response.json()
 
-    # Print employee's TODO list progress
-    print(
-        f"Employee {employee_data.get('name')} is done with tasks ({completed_tasks}/{total_tasks}):")
+# Calculate TODO list progress
+total_tasks = len(todo_data)
+completed_tasks = sum(1 for task in todo_data if task.get("completed"))
 
-    # Print titles of completed tasks
-    for task in todo_data:
-        if task.get("completed"):
-            print(f"\t{task['title']}")
+# Print employee's TODO list progress
+print(
+    f"Employee {employee_data.get('name')} is done with tasks ({completed_tasks}/{total_tasks}):")
 
-    # Create a dictionary to represent the data
-    employee_json_data = {
-        str(employee_id): [
-            {
-                "task": task.get("title"),
-                "completed": task.get("completed"),
-                "username": employee_data.get('username')
-            }
-            for task in todo_data
-        ]
-    }
+# Print titles of completed tasks
+for task in todo_data:
+    if task.get("completed"):
+        print(f"\t{task['title']}")
 
-    # Export data to JSON
-    json_file_name = f"{employee_id}.json"
-    with open(json_file_name, 'w') as json_file:
-        json.dump(employee_json_data, json_file, indent=4)
+# Create a dictionary to represent the data
+employee_json_data = {
+    str(employee_id): [
+        {
+            "task": task.get("title"),
+            "completed": task.get("completed"),
+            "username": employee_data.get('username')
+        }
+        for task in todo_data
+    ]
+}
 
-    print(f"Data exported to {json_file_name}")
+# Export data to JSON
+json_file_name = f"{employee_id}.json"
+with open(json_file_name, 'w') as json_file:
+    json.dump(employee_json_data, json_file, indent=4)
 
-except requests.exceptions.RequestException as e:
-    """
-    handle any exceptions during API request
-    """
-    print(f"Error: {e}")
-    sys.exit(1)
+print(f"Data exported to {json_file_name}")
+
