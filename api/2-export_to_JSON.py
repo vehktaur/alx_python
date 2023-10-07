@@ -1,13 +1,10 @@
 """
-this module request data from a REST API 
-and returns a json file containing information
-from the requested data
+This module requests data from a REST API and returns a JSON file containing information from the requested data.
 """
 
 import json
 import requests
 import sys
-
 
 employee_id = sys.argv[1]
 
@@ -15,7 +12,6 @@ employee_id = sys.argv[1]
 employee_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}"
 # URL for employee's TODO list
 todo_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}/todos"
-
 
 # Fetch employee details
 employee_response = requests.get(employee_url)
