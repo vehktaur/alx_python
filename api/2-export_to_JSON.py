@@ -1,6 +1,18 @@
 """
-This module requests data from a REST API and returns a JSON file containing information from the requested data.
+This module serves as a utility for interacting with a REST API to retrieve employee data and their associated TODO tasks. It provides functionality to request data from the API, process it, and export it into JSON format.
+
+Usage:
+    To use this module, provide an employee ID as a command-line argument when running the script. The module will then retrieve information about the specified employee, including their name and a list of TODO tasks. It calculates the progress of completed tasks and exports this data into a JSON file.
+    
+Module Structure:
+    - The module first constructs the URLs for employee details and their TODO list based on the provided employee ID.
+    - It fetches data from the API using the `requests` library.
+    - The module calculates the total number of tasks and the number of completed tasks to determine progress.
+    - It prints the progress information and the titles of completed tasks to the console.
+    - The module then constructs a dictionary to represent the data in a structured format.
+    - Finally, it exports the data into a JSON file and prints a confirmation message.
 """
+
 
 import json
 import requests

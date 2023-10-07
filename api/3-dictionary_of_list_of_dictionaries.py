@@ -18,7 +18,7 @@ def get_todo_data():
         all_employee_data = {}
 
         for employee in employees_data:
-            employee_id = employee["id"]
+            employee_id = employee.get("id")
             employee_name = employee.get("username")
 
             # URL for employee's TODO list
