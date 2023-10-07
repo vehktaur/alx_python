@@ -3,6 +3,7 @@ this module request data from a REST API
 and returns a json file containing information
 from the requested data
 """
+
 import json
 import requests
 import sys
@@ -16,9 +17,6 @@ employee_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}"
 todo_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}/todos"
 
 
-"""
-try to get data from API
-"""
 # Fetch employee details
 employee_response = requests.get(employee_url)
 employee_data = employee_response.json()
@@ -55,10 +53,6 @@ employee_json_data = {
 # Export data to JSON
 json_file_name = f"{employee_id}.json"
 with open(json_file_name, 'w') as json_file:
-    """
-    some extra documentation
-    """
     json.dump(employee_json_data, json_file, indent=4)
 
 print(f"Data exported to {json_file_name}")
-

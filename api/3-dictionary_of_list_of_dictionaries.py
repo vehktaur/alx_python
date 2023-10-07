@@ -19,7 +19,7 @@ def get_todo_data():
 
         for employee in employees_data:
             employee_id = employee["id"]
-            employee_name = employee["name"]
+            employee_name = employee.get("username")
 
             # URL for employee's TODO list
             todo_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}/todos"
@@ -33,8 +33,8 @@ def get_todo_data():
 
             # Populate the TODO list for the current employee
             for task in todo_data:
-                task_title = task["title"]
-                task_completed = task["completed"]
+                task_title = task.get("title")
+                task_completed = task.get("completed")
                 todo_list.append(
                     {"username": employee_name, "task": task_title, "completed": task_completed})
 
