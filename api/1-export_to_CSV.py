@@ -32,9 +32,8 @@ def get_employee_info(employee_id):
 
     # Export data to CSV
     csv_file_name = f"{employee_id}.csv"
-    with open(csv_file_name, mode='w', newline='') as csv_file:
-        csv_writer = csv.writer(
-            csv_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    with open(csv_file_name, mode='w') as csv_file:
+        csv_writer = csv.writer(csv_file, quoting=csv.QUOTE_ALL)
 
         # Write TODO list data to CSV
         for task in todo_data:
